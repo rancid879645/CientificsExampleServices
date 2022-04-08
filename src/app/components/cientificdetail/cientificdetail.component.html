@@ -1,0 +1,10 @@
+<span [ngClass]="isDark ? 'd-block p-2 bg-dark text-white': 'd-block p-2 bg-ligth'" class="">
+    <div [ngClass]="isDark ? 'card bg-dark': 'card bg-ligth'" class="" style="width: 18rem;">
+        <div class="card-body">
+            <h4 class="card-title"> {{ cientific.nombre }} </h4>
+            <p class="card-text"> {{ cientific.data }} </p>
+            <p class="card-text"> {{ cientific.genero }} </p>
+            <a class="btn btn-primary" routerLink="../cientific">Return</a>
+        </div>
+    </div>
+</span>

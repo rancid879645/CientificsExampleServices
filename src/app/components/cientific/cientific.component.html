@@ -1,0 +1,20 @@
+<div class="btn-group bg-dark" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-secondary" (click)="FilterByGenre('M')">Male</button>
+    <button type="button" class="btn btn-secondary" (click)="FilterByGenre('F')">Female</button>
+    <button type="button" class="btn btn-secondary" (click)="GetAllCientifics()">All</button>
+  </div>
+<div>    
+    <ul class="list-group">
+        <li *ngFor="let n of cientificList; let i = index" [ngClass]="isDark ? 'bg-dark': 'bg-ligth'">
+            <span [ngClass]="isDark ? 'd-block p-2 bg-dark text-white': 'd-block p-2 bg-ligth'" class="">
+                <div [ngClass]="isDark ? 'card bg-dark': 'card bg-ligth'" class="" style="width: 18rem;">
+                    <div class="card-body">
+                        <h4 class="card-title"> {{ n.nombre }} </h4>
+                        <p class="card-text"> {{ n.genero }} </p>
+                        <a class="btn btn-primary" (click)="showDetails(n.id)">Check out</a>
+                    </div>
+                </div>
+            </span>            
+        </li>
+    </ul>
+</div>    
